@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Ml Flask</title>
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/style.css')}}">
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/bootstrap.css')}}">
+</head>
+<body>
+ 
+  <div align="center" class="bg-info">
+ <h1>Detector for NBA Players</h1></div>
+ <div class="big" align="center">
+   <form action="{{url_for('predict')}}" method="POST">
+     
+   <h3>Enter Your PointsPerGame(PTG) </h3>
+   <textarea name="ptg" required="required" rows="4" cols="50"></textarea>
+   
+   <h3>Enter Your FieldGoalPercent(FG%) </h3>
+   <textarea name="fg" required="required" rows="4" cols="50"></textarea>
+   
+   <h3>Enter Your PointAttemps(3P%) </h3>
+   <textarea name="p3" required="required" rows="4" cols="50"></textarea>
+
+   <h3>Enter Your FreeTHrowPercent(FT%) </h3>
+   <textarea name="ft" required="required" rows="4" cols="50"></textarea>
+
+   <h3>Enter Your minutesPlayed(MIn) </h3>
+   <textarea name="min" required="required" rows="4" cols="50"></textarea>
+
+   <h3>Enter Your rebounds(REB) </h3>
+   <textarea name="reb" required="required" rows="4" cols="50"></textarea>
+
+   <h3>Enter Your GamesPlayed(GP) </h3>
+   <textarea name="gp" required="required" rows="4" cols="50"></textarea>
+
+   <h3>Enter Your Assists(AST) </h3>
+   <textarea name="ast" required="required" rows="4" cols="50"></textarea>
+
+   <h3>Enter Your Steals(STL) </h3>
+   <textarea name="stl" required="required" rows="4" cols="50"></textarea>
+
+   <h3>Enter Your Blocks(BLK) </h3>
+   <textarea name="blk" required="required" rows="4" cols="50"></textarea>
+
+   <h3>Enter Your Turnovers(TOV) </h3>
+   <textarea name="tov" required="required" rows="4" cols="50"></textarea>
+   
+   
+   <br>
+   <input type="submit" name="" value="Predict" class="btn btn-info">
+  </form>
+ </div>
+</body>
+</html>
